@@ -16,6 +16,7 @@ This project lets a teacher:
 - Backend API: https://vedaai-api-5opp.onrender.com
 - Health Check: https://vedaai-api-5opp.onrender.com/health
 - Product Demo (Loom): https://www.loom.com/share/9e31d87570da4f32942b8257a9c83152
+- Architecture Walkthrough (Loom): https://www.loom.com/share/cea937eebf434c17ac9bfa3aa22868b4
 
 ## Requirements Coverage
 
