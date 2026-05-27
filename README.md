@@ -10,6 +10,13 @@ This project lets a teacher:
 - generate a question paper using AI
 - view the generated output in a structured exam-paper layout
 
+## Live Links
+
+- Frontend: https://vedaai-assessment-monorepo-web.vercel.app/
+- Backend API: https://vedaai-api-5opp.onrender.com
+- Health Check: https://vedaai-api-5opp.onrender.com/health
+- Product Demo (Loom): https://www.loom.com/share/9e31d87570da4f32942b8257a9c83152
+
 ## Requirements Coverage
 
 ### 1. Assignment Creation (Frontend)
