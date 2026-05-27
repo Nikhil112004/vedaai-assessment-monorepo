@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Reference tokens (raw values from design) */
+  --ref-white: #ffffff;
+  --ref-white-50: #ffffff80;
+  --ref-page-0: #eeeeee;
+  --ref-page-100: #dadada;
+  --ref-ink-900: #303030;
+  --ref-ink-600a: #5e5e5ecc;
+  --ref-brand-orange: #ff5623;
+  --ref-brand-orange-300: #ff7950;
+  --ref-brand-orange-800: #c0350a;
+  --ref-brand-dark: #181818;
+  --ref-danger-red: #ef4444;
+  --ref-font-family-base: var(--font-bricolage-grotesque);
+  --ref-font-family-button: var(--font-inter);
+  --ref-font-size-14: 14px;
+  --ref-font-size-16: 16px;
+  --ref-font-size-20: 20px;
+  --ref-line-height-140: 1.4;
+  --ref-line-height-28: 28px;
+  --ref-letter-spacing-tight: -0.04em;
+  --ref-space-2: 2px;
+  --ref-space-8: 8px;
+  --ref-space-12: 12px;
+  --ref-space-16: 16px;
+  --ref-space-22: 22px;
+  --ref-space-24: 24px;
+  --ref-space-32: 32px;
+  --ref-space-48: 48px;
+  --ref-space-56: 56px;
+  --ref-space-228: 228px;
+  --ref-radius-8: 8px;
+  --ref-radius-24: 24px;
+  --ref-radius-32: 32px;
+  --ref-radius-100: 100px;
+  --ref-border-1-25: 1.25px;
+  --ref-border-4: 4px;
+  --ref-shadow-floating-fab-layer-1: 0 32px 48px 0 rgba(0, 0, 0, 0.2);
+  --ref-shadow-floating-fab-layer-2: 0 16px 48px 0 rgba(0, 0, 0, 0.12);
+
+  /* Semantic tokens (used in app code) */
+  --color-surface-page: var(--ref-page-0);
+  --color-surface-sidebar: var(--ref-white);
+  --color-surface-panel: var(--ref-white);
+  --color-surface-muted: var(--ref-white-50);
+  --color-surface-white-50: var(--color-surface-muted); /* alias for Figma naming */
+  --color-surface-elevated: var(--ref-white);
+  --color-surface-inverse: #111316;
+  --gradient-surface-page: linear-gradient(180deg, var(--ref-page-0) 0%, var(--ref-page-100) 100%);
+  --color-surface-base: var(--ref-white);
+
+  --color-text-primary: var(--ref-ink-900);
+  --color-text-secondary: var(--ref-ink-600a);
+  --color-text-muted: #7f8188;
+  --color-text-inverse: var(--ref-white);
+  --color-text-accent: var(--ref-brand-orange);
+  --color-text-danger: #ef4444;
+
+  --color-border-subtle: #e2e2e4;
+  --color-border-default: #c5c6c9;
+  --color-border-strong: #aeb0b5;
+
+  --color-brand-primary: var(--ref-brand-orange);
+  --color-brand-secondary: var(--ref-brand-dark);
+  --color-brand-glow: var(--ref-brand-orange-300);
+  --gradient-brand-primary-border: linear-gradient(180deg, var(--ref-brand-orange-300) 0%, var(--ref-brand-orange-800) 100%);
+  --gradient-brand-dark-border: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(102, 102, 102, 0) 100%);
+  --size-border-brand-dark: 1.5px;
+
+  --color-status-success: #2fbf71;
+  --color-status-warning: #f59e0b;
+  --color-status-danger: var(--ref-danger-red);
+  --color-status-notification: var(--ref-brand-orange);
+  --color-status-info: #3b82f6;
+
+  --font-family-base: var(--ref-font-family-base);
+  --font-family-heading: var(--ref-font-family-base);
+  --font-family-button: var(--ref-font-family-button);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-size-body-sm: var(--ref-font-size-14);
+  --font-size-body-md: var(--ref-font-size-16);
+  --font-size-heading-lg: var(--ref-font-size-20);
+  --font-size-button: var(--ref-font-size-16);
+
+  --line-height-body-sm: var(--ref-line-height-140);
+  --line-height-body-md: var(--ref-line-height-140);
+  --line-height-heading-lg: var(--ref-line-height-140);
+  --line-height-button: var(--ref-line-height-28);
+
+  --letter-spacing-default: var(--ref-letter-spacing-tight);
+  --letter-spacing-button: var(--ref-letter-spacing-tight);
+
+  --space-2xs: var(--ref-space-2);
+  --space-3xs: var(--ref-space-8);
+  --space-xs: var(--ref-space-12);
+  --space-sm: var(--ref-space-16);
+  --space-md: var(--ref-space-24);
+  --space-lg: var(--ref-space-32);
+  --space-xl: var(--ref-space-48);
+  --space-2xl: var(--ref-space-56);
+
+  --space-layout-header-offset: var(--ref-space-22);
+  --space-layout-sidebar-nav-to-settings: var(--ref-space-228);
+  --space-layout-settings-to-card: var(--ref-space-8);
+  --space-layout-sidebar-card-bottom: var(--ref-space-24);
+  --space-card-padding: var(--ref-space-24);
+  --space-card-content-gap: var(--ref-space-48);
+  --space-container-padding: var(--ref-space-32);
+  --space-container-content-gap: var(--ref-space-32);
+  --space-button-x: 43px;
+  --space-button-y: var(--ref-space-8);
+  --space-button-content-gap: 10px;
+  --space-input-x: var(--ref-space-16);
+  --space-input-y: 11px;
+  --space-badge-x: 10px;
+  --space-badge-content-gap: var(--ref-space-8);
+
+  --radius-badge: var(--ref-radius-8);
+  --radius-card: var(--ref-radius-24);
+  --radius-container: var(--ref-radius-32);
+  --radius-pill: var(--ref-radius-100);
+  --radius-input: var(--ref-radius-100);
+
+  --border-width-input: var(--ref-border-1-25);
+  --border-width-brand-strong: var(--ref-border-4);
+  --shadow-badge-orange-inset: inset 0 0 32.3px 0 #ffa10a40;
+  --shadow-floating-fab: var(--ref-shadow-floating-fab-layer-1), var(--ref-shadow-floating-fab-layer-2);
+}
+
+body {
+  font-family: var(--font-family-base), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-page);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

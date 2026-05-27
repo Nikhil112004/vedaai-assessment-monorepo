@@ -1,0 +1,25 @@
+{
+  "name": "VedaAI",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "build:web": "pnpm --filter web build",
+    "build:api": "pnpm --filter api build",
+    "dev": "node scripts/dev-runner.mjs",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "start:web": "pnpm --filter web start",
+    "start:api": "pnpm --filter api start",
+    "verify:deploy": "pnpm --filter web lint && pnpm --filter web check-types && pnpm --filter web build && pnpm --filter api build"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.9.14",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
