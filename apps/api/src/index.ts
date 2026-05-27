@@ -12,12 +12,13 @@ import { generationQueue } from './workers/generation.queue';
 import { pdfQueue } from './workers/pdf.queue';
 import { pdfWorker } from './workers/pdf.worker';
 import { ensureStorageDirs } from './infra/storage';
+import { corsOptions } from './infra/cors';
 
 const app = express();
 let server: http.Server | null = null;
 let shuttingDown = false;
 
-app.use(cors({ origin: config.frontendUrl }));
+app.use(cors(corsOptions));
 app.use(express.json());
 app.get('/health', (_req, res) => {
   res.status(200).json({

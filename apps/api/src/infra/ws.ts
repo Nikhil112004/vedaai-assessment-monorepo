@@ -1,6 +1,6 @@
 import type { Server as HttpServer } from 'node:http';
 import { Server as SocketIOServer } from 'socket.io';
-import { config } from '../config';
+import { socketCorsOrigin } from './cors';
 
 type AssignmentEventPayload = {
   assignmentId: string;
@@ -16,7 +16,7 @@ const objectIdPattern = /^[a-fA-F0-9]{24}$/;
 export const initializeSocketServer = (server: HttpServer): SocketIOServer => {
   io = new SocketIOServer(server, {
     cors: {
-      origin: config.frontendUrl,
+      origin: socketCorsOrigin,
     },
   });
 
